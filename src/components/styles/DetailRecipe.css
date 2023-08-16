@@ -1,0 +1,50 @@
+.card-image-detail {
+    grid-area: image;
+    border-radius: 10px;
+    background-size: cover !important;
+    background-position: center;
+  }
+
+  .back-button{
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 12px;
+    color: tomato
+  }
+
+  .back-button:hover{
+    color: var(--color-fifth)
+  }
+
+  .recipe-title{
+    margin: 20px;
+    margin-bottom: 10px;
+    font-size: 42px;
+    font-weight: 700;
+  }
+
+  .recipe-star{
+    color: tomato;
+    font-size: 24px;
+  }
+
+  .wrap-content{
+    border-radius: 10px;
+    border: 2px solid tomato;
+  }
+
+  .wrap-info{
+    border-radius: 10px;
+    background-color: white;
+  }
+
+  .direct-content::before{
+    counter-increment: section;
+    content: counter(section);
+    float: left;
+    margin: 3px 14px 0 7px;
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 1;
+    min-width: 24px;
+  }
