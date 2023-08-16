@@ -1,0 +1,25 @@
+@tailwind base;
+
+@layer base{
+  * {
+    outline: none;
+  }
+
+  :root {
+    --color-primary: #ffd8d8;
+    --color-secondary: #ff7575;
+    --color-third: #ff7c7c;
+    --color-fourth: #ffffffeb;
+    --color-fifth: #e16868;
+  }
+  
+  body{
+    @apply font-sans
+  }
+  
+  body{
+    margin: 0;
+    background-color: var(--color-primary);
+    counter-reset: section;
+  }
+}
