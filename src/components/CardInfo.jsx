@@ -4,7 +4,7 @@ import { AiOutlineClockCircle, AiOutlineEye, AiOutlineStar } from "react-icons/a
 import { Link } from 'react-router-dom';
 
 export default function CardInfo({recipeInfo}) {
-  const totalTiemRep = recipeInfo.totalTime.replace(" hr ", "h").replace(" min", "m")
+  const totalTimeRep = recipeInfo.totalTime.replace(" hr ", "h").replace(" min", "m")
   return (
     <Link to={`/recipe/${recipeInfo.slug}`} className="card">
         <div className="card-image" style={{background: `url("${recipeInfo.img}")`}}></div>
@@ -14,7 +14,7 @@ export default function CardInfo({recipeInfo}) {
         <div className="card-stats">
         <div className="stat">
             <AiOutlineClockCircle className="icon-des"/>
-            <div className="value">{totalTiemRep}</div>
+            <div className="value">{totalTimeRep}</div>
         </div>
         <div className="stat stat-border">
             <AiOutlineEye className="icon-des"/>
