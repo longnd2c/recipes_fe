@@ -21,7 +21,7 @@ export default function Home({isMobile, isTablet}) {
   const [isLoading, setIsLoading] = useState(true)
 
   const cssLoading = {
-    position: "absolute",
+    position: "fixed",
     textAlign: "center",
     left: "0",
     right: "0",
@@ -41,7 +41,7 @@ export default function Home({isMobile, isTablet}) {
     if(categoriesSelected.includes(catName)){
       if(!valueSearch) setSearchParams({c: [...categoriesSelected.filter((e) => e!== catName)]})
       else setSearchParams({s: valueSearch, c: [...categoriesSelected.filter((e) => e!== catName)]});
-      setCategoriesSelected([...categoriesSelected.filter((e) => e!= catName)])
+      setCategoriesSelected([...categoriesSelected.filter((e) => e!== catName)])
     } 
     else {
       if(!valueSearch) setSearchParams({c: [...categoriesSelected, catName]});
@@ -60,7 +60,7 @@ export default function Home({isMobile, isTablet}) {
     setIsLoading(true)
     let tempCat = []
     if(categoriesSelected){
-      if(listCat.length==0){
+      if(listCat.length===0){
         const res = await RecipeModel.getAllCategory()
         categoriesSelected.map((item) => {
           tempCat.push(res.data.filter((e) => e.name === item)[0]?.id)
